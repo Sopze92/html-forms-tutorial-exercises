@@ -1,22 +1,114 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>4Geeks Academy</title>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>4Geeks Academy</title>
+		<style>
+			/* your code here */
+			body,
+			* {
+				font-size: 14px;
+			}
+			table {
+				border: solid 1px #000;
+				padding: 2px;
+			}
+			th {
+				border: solid 1px #000;
+				background-color: #8af;
+				padding: 2px;
+			}
+			td {
+				border: solid 1px #000;
+				padding: 2px;
+			}
 
-    <style>
-        /* your code here */
-        
-    </style>
-</head>
+			input[type="text"],
+			input[type="textbox"] {
+				box-sizing: border-box;
+				margin-left: 2px;
+				margin-right: 6px;
+				width: 100%;
+			}
 
-<body>
-    <form>
-        <!-- your code here -->
-        
-    </form>
-</body>
+			input[type="textbox"] {
+				min-height: 100px;
+			}
+			#checkall {
+				display: flex;
+				flex-direction: column;
+			}
+			.center {
+				display: flex;
+				align-content: center;
+			}
+			.center * {
+				margin: auto;
+			}
+		</style>
+	</head>
 
+	<body>
+		<form>
+			<!-- your code here -->
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Value</th>
+				</tr>
+				<tr>
+					<td><label for="name">Name</label></td>
+					<td><input type="text" id="name" /></td>
+				</tr>
+				<tr>
+					<td><label for="name">Sex</label></td>
+					<td>
+						<input type="radio" id="sex-male" name="sex" value="Male" />
+						<label for="sex-male">Male</label>
+						<input type="radio" id="sex-female" name="sex" value="Female" />
+						<label for="sex-female">Female</label>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="eyes">Eye color</label></td>
+					<td>
+						<select id="eyes" name="eyes">
+							<option value="green">green</option>
+							<option value="brown">brown</option>
+							<option value="blue">blue</option>
+							<option value="none">eyeless</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="check">Check all that apply</label></td>
+					<td id="checkall">
+						<div>
+							<input type="checkbox" id="check-plus6f" name="check" value="plus6f" />
+							<label for="check-plus6f">Over 6 feet tall</label>
+						</div>
+						<div>
+							<input type="checkbox" id="check-plus200p" name="check" value="plus200p" />
+							<label for="check-plus200p">Over 200 pounds</label>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<label for="longtext">Describe your athletic ability:</label>
+						<input type="textbox" id="longtext" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<div class="center">
+							<input type="submit" value="Enter my information" />
+						</div>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
 </html>
